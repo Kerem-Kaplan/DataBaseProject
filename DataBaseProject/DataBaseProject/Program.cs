@@ -16,7 +16,7 @@ namespace DataBaseProject
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmOnOdemeliRezervasyon());
+            Application.Run(new FrmAnasayfa());
         }
     }
 }

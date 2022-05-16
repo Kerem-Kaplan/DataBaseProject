@@ -17,6 +17,11 @@ namespace DataBaseProject
             InitializeComponent();
         }
 
-       
+        private void BtnOnOdemeliRez_Click(object sender, EventArgs e)
+        {
+            FrmOnOdemeliRezervasyon frmOnOdemeliRezervasyon = new FrmOnOdemeliRezervasyon();
+            frmOnOdemeliRezervasyon.Show();
+            this.Hide();
+        }
     }
 }

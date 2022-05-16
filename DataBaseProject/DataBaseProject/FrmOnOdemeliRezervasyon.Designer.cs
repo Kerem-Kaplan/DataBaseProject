@@ -45,6 +45,7 @@ namespace DataBaseProject
             this.TxtMusteriSoyad = new System.Windows.Forms.TextBox();
             this.TxtMusteriMail = new System.Windows.Forms.TextBox();
             this.LblMusteriMail = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // BtnRezYap
@@ -56,6 +57,7 @@ namespace DataBaseProject
             this.BtnRezYap.TabIndex = 5;
             this.BtnRezYap.Text = "Rezervasyon Yap";
             this.BtnRezYap.UseVisualStyleBackColor = true;
+            this.BtnRezYap.Click += new System.EventHandler(this.BtnRezYap_Click);
             // 
             // LblTutar
             // 
@@ -79,6 +81,7 @@ namespace DataBaseProject
             // 
             // DtpOnOdemeliBasTarihi
             // 
+            this.DtpOnOdemeliBasTarihi.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.DtpOnOdemeliBasTarihi.Location = new System.Drawing.Point(432, 233);
             this.DtpOnOdemeliBasTarihi.Name = "DtpOnOdemeliBasTarihi";
             this.DtpOnOdemeliBasTarihi.Size = new System.Drawing.Size(227, 22);
@@ -108,6 +111,7 @@ namespace DataBaseProject
             // 
             // DtpOnOdemeliBitisTarihi
             // 
+            this.DtpOnOdemeliBitisTarihi.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.DtpOnOdemeliBitisTarihi.Location = new System.Drawing.Point(432, 315);
             this.DtpOnOdemeliBitisTarihi.Name = "DtpOnOdemeliBitisTarihi";
             this.DtpOnOdemeliBitisTarihi.Size = new System.Drawing.Size(227, 22);
@@ -195,11 +199,22 @@ namespace DataBaseProject
             this.LblMusteriMail.TabIndex = 17;
             this.LblMusteriMail.Text = "Mail:";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label1.Location = new System.Drawing.Point(726, 258);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(122, 44);
+            this.label1.TabIndex = 19;
+            this.label1.Text = "label1";
+            // 
             // FrmOnOdemeliRezervasyon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1395, 769);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.TxtMusteriMail);
             this.Controls.Add(this.LblMusteriMail);
             this.Controls.Add(this.TxtMusteriSoyad);
@@ -218,6 +233,7 @@ namespace DataBaseProject
             this.Controls.Add(this.LblUcret);
             this.Name = "FrmOnOdemeliRezervasyon";
             this.Text = "FrmOnOdemeliRezervasyon";
+            this.Load += new System.EventHandler(this.FrmOnOdemeliRezervasyon_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -241,5 +257,6 @@ namespace DataBaseProject
         private System.Windows.Forms.TextBox TxtMusteriSoyad;
         private System.Windows.Forms.TextBox TxtMusteriMail;
         private System.Windows.Forms.Label LblMusteriMail;
+        private System.Windows.Forms.Label label1;
     }
 }

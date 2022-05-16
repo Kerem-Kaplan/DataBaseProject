@@ -44,6 +44,7 @@ namespace DataBaseProject
             this.BtnRezervasyon.TabIndex = 0;
             this.BtnRezervasyon.Text = "Rezervasyon Yap";
             this.BtnRezervasyon.UseVisualStyleBackColor = true;
+            this.BtnRezervasyon.Click += new System.EventHandler(this.BtnRezervasyon_Click);
             // 
             // BtnCalisanGiris
             // 
@@ -54,6 +55,7 @@ namespace DataBaseProject
             this.BtnCalisanGiris.TabIndex = 1;
             this.BtnCalisanGiris.Text = "Çalışan Giriş";
             this.BtnCalisanGiris.UseVisualStyleBackColor = true;
+            this.BtnCalisanGiris.Click += new System.EventHandler(this.BtnCalisanGiris_Click);
             // 
             // BtnYoneticiGiris
             // 
@@ -64,6 +66,7 @@ namespace DataBaseProject
             this.BtnYoneticiGiris.TabIndex = 2;
             this.BtnYoneticiGiris.Text = "Yönetici Giriş";
             this.BtnYoneticiGiris.UseVisualStyleBackColor = true;
+            this.BtnYoneticiGiris.Click += new System.EventHandler(this.BtnYoneticiGiris_Click);
             // 
             // BtnRezervasyonGetir
             // 
@@ -74,6 +77,7 @@ namespace DataBaseProject
             this.BtnRezervasyonGetir.TabIndex = 3;
             this.BtnRezervasyonGetir.Text = "Rezervasyon Getir";
             this.BtnRezervasyonGetir.UseVisualStyleBackColor = true;
+            this.BtnRezervasyonGetir.Click += new System.EventHandler(this.BtnRezervasyonGetir_Click);
             // 
             // FrmAnasayfa
             // 

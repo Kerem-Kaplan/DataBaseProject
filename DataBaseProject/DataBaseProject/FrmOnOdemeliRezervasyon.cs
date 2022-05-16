@@ -17,6 +17,16 @@ namespace DataBaseProject
             InitializeComponent();
         }
 
+        private void FrmOnOdemeliRezervasyon_Load(object sender, EventArgs e)
+        {
 
+        }
+
+        private void BtnRezYap_Click(object sender, EventArgs e)
+        {   
+            TimeSpan timeSpan = DtpOnOdemeliBitisTarihi.Value - DtpOnOdemeliBasTarihi.Value;
+            label1.Text = timeSpan.Days.ToString();
+
+        }
     }
 }

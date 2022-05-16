@@ -55,6 +55,7 @@ namespace DataBaseProject
             this.BtnOnOdemeliRez.TabIndex = 1;
             this.BtnOnOdemeliRez.Text = "Ön Ödemeli Rezervasyon";
             this.BtnOnOdemeliRez.UseVisualStyleBackColor = true;
+            this.BtnOnOdemeliRez.Click += new System.EventHandler(this.BtnOnOdemeliRez_Click);
             // 
             // BtnStandartRez
             // 
@@ -86,7 +87,7 @@ namespace DataBaseProject
             this.Btn60GunOnceRez.Text = "60 Gün Önceden Rezervasyon";
             this.Btn60GunOnceRez.UseVisualStyleBackColor = true;
             // 
-            // FrmReservationSelection
+            // FrmRezervasyonSecimi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -96,7 +97,7 @@ namespace DataBaseProject
             this.Controls.Add(this.BtnStandartRez);
             this.Controls.Add(this.BtnOnOdemeliRez);
             this.Controls.Add(this.LblBİlgilendirme);
-            this.Name = "FrmReservationSelection";
+            this.Name = "FrmRezervasyonSecimi";
             this.Text = "FrmReservationSelection";
             this.ResumeLayout(false);
             this.PerformLayout();
