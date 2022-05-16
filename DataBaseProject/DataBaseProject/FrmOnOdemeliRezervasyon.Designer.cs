@@ -46,6 +46,9 @@ namespace DataBaseProject
             this.TxtMusteriMail = new System.Windows.Forms.TextBox();
             this.LblMusteriMail = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // BtnRezYap
@@ -203,17 +206,50 @@ namespace DataBaseProject
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.Location = new System.Drawing.Point(726, 258);
+            this.label1.Location = new System.Drawing.Point(919, 339);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(122, 44);
             this.label1.TabIndex = 19;
             this.label1.Text = "label1";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label2.Location = new System.Drawing.Point(707, 339);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(206, 44);
+            this.label2.TabIndex = 20;
+            this.label2.Text = "RezSüresi:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label3.Location = new System.Drawing.Point(665, 226);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(316, 44);
+            this.label3.TabIndex = 22;
+            this.label3.Text = "Reze Kalan Süre:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label4.Location = new System.Drawing.Point(987, 226);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(122, 44);
+            this.label4.TabIndex = 21;
+            this.label4.Text = "label4";
             // 
             // FrmOnOdemeliRezervasyon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1395, 769);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.TxtMusteriMail);
             this.Controls.Add(this.LblMusteriMail);
@@ -258,5 +294,8 @@ namespace DataBaseProject
         private System.Windows.Forms.TextBox TxtMusteriMail;
         private System.Windows.Forms.Label LblMusteriMail;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
     }
 }
