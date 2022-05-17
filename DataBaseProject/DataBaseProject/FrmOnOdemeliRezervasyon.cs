@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -23,8 +24,18 @@ namespace DataBaseProject
         }
 
         private void BtnRezYap_Click(object sender, EventArgs e)
+<<<<<<< Updated upstream
         {
             double rezSuresi = Math.Ceiling(RezarvasyonSuresi().TotalDays);
+=======
+        {   
+            TimeSpan timeSpan = DtpOnOdemeliBitisTarihi.Value - DtpOnOdemeliBasTarihi.Value;
+            label1.Text = timeSpan.Days.ToString();
+            DataBaseConnection baglanti = new DataBaseConnection();
+            baglanti.DbConnection();
+            string insertRez = "insert into Reservation(ReservationType,)";
+            SqlCommand InsertRez=new SqlCommand()
+>>>>>>> Stashed changes
 
             label1.Text = rezSuresi.ToString();
 
