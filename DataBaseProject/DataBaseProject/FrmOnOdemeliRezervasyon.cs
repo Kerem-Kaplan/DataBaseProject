@@ -36,7 +36,6 @@ namespace DataBaseProject
         {
             TimeSpan Sure;
             Sure = DtpOnOdemeliBitisTarihi.Value - DtpOnOdemeliBasTarihi.Value;
-
             return Sure;
         }
         public TimeSpan GunKontrol()
