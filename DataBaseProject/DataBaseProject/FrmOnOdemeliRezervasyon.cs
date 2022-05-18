@@ -40,8 +40,6 @@ namespace DataBaseProject
             InsertCustomer.Parameters.AddWithValue("@cusMail", TxtMusteriMail.Text);
             InsertCustomer.Parameters.AddWithValue("@cusCard", TxtKrediKartiNo.Text);
 
-
-
             double rezSuresi = Math.Ceiling(RezarvasyonSuresi().TotalDays);
             double KalanSure = Math.Ceiling(GunKontrol().TotalDays);
 

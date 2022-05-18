@@ -53,6 +53,24 @@
     <Compile Include="Frm60GunOncedenRezervasyon.Designer.cs">
       <DependentUpon>Frm60GunOncedenRezervasyon.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmGirisYap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmGirisYap.Designer.cs">
+      <DependentUpon>FrmGirisYap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmKayitOl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmKayitOl.Designer.cs">
+      <DependentUpon>FrmKayitOl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmBaslangıcSayfa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmBaslangıcSayfa.Designer.cs">
+      <DependentUpon>FrmBaslangıcSayfa.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmMusteriRezervasyon.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -91,6 +109,15 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmBaslangıcSayfa.resx">
+      <DependentUpon>FrmBaslangıcSayfa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmGirisYap.resx">
+      <DependentUpon>FrmGirisYap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmKayitOl.resx">
+      <DependentUpon>FrmKayitOl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmMusteriRezervasyon.resx">
       <DependentUpon>FrmMusteriRezervasyon.cs</DependentUpon>
     </EmbeddedResource>

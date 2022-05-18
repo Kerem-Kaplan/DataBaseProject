@@ -30,8 +30,6 @@ namespace DataBaseProject
         private void InitializeComponent()
         {
             this.BtnRezervasyon = new System.Windows.Forms.Button();
-            this.BtnCalisanGiris = new System.Windows.Forms.Button();
-            this.BtnYoneticiGiris = new System.Windows.Forms.Button();
             this.BtnRezervasyonGetir = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -46,32 +44,10 @@ namespace DataBaseProject
             this.BtnRezervasyon.UseVisualStyleBackColor = true;
             this.BtnRezervasyon.Click += new System.EventHandler(this.BtnRezervasyon_Click);
             // 
-            // BtnCalisanGiris
-            // 
-            this.BtnCalisanGiris.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnCalisanGiris.Location = new System.Drawing.Point(841, 233);
-            this.BtnCalisanGiris.Name = "BtnCalisanGiris";
-            this.BtnCalisanGiris.Size = new System.Drawing.Size(211, 85);
-            this.BtnCalisanGiris.TabIndex = 1;
-            this.BtnCalisanGiris.Text = "Çalışan Giriş";
-            this.BtnCalisanGiris.UseVisualStyleBackColor = true;
-            this.BtnCalisanGiris.Click += new System.EventHandler(this.BtnCalisanGiris_Click);
-            // 
-            // BtnYoneticiGiris
-            // 
-            this.BtnYoneticiGiris.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnYoneticiGiris.Location = new System.Drawing.Point(486, 233);
-            this.BtnYoneticiGiris.Name = "BtnYoneticiGiris";
-            this.BtnYoneticiGiris.Size = new System.Drawing.Size(211, 85);
-            this.BtnYoneticiGiris.TabIndex = 2;
-            this.BtnYoneticiGiris.Text = "Yönetici Giriş";
-            this.BtnYoneticiGiris.UseVisualStyleBackColor = true;
-            this.BtnYoneticiGiris.Click += new System.EventHandler(this.BtnYoneticiGiris_Click);
-            // 
             // BtnRezervasyonGetir
             // 
             this.BtnRezervasyonGetir.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnRezervasyonGetir.Location = new System.Drawing.Point(486, 392);
+            this.BtnRezervasyonGetir.Location = new System.Drawing.Point(667, 233);
             this.BtnRezervasyonGetir.Name = "BtnRezervasyonGetir";
             this.BtnRezervasyonGetir.Size = new System.Drawing.Size(211, 85);
             this.BtnRezervasyonGetir.TabIndex = 3;
@@ -85,8 +61,6 @@ namespace DataBaseProject
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1443, 725);
             this.Controls.Add(this.BtnRezervasyonGetir);
-            this.Controls.Add(this.BtnYoneticiGiris);
-            this.Controls.Add(this.BtnCalisanGiris);
             this.Controls.Add(this.BtnRezervasyon);
             this.Name = "FrmAnasayfa";
             this.Text = "AnaSayfa";
@@ -97,8 +71,6 @@ namespace DataBaseProject
         #endregion
 
         private System.Windows.Forms.Button BtnRezervasyon;
-        private System.Windows.Forms.Button BtnCalisanGiris;
-        private System.Windows.Forms.Button BtnYoneticiGiris;
         private System.Windows.Forms.Button BtnRezervasyonGetir;
     }
 }
