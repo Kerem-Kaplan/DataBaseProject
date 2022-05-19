@@ -21,8 +21,10 @@ namespace DataBaseProject
         private void FrmOnOdemeliRezervasyon_Load(object sender, EventArgs e)
         {
 
-            DtpOnOdemeliBasTarihi.Value = DateTime.Now.AddDays(90);
-            DtpOnOdemeliBitisTarihi.Value = DateTime.Now.AddDays(90);
+        //    DtpOnOdemeliBasTarihi.Value = DateTime.Now.AddDays(90);
+            DtpOnOdemeliBasTarihi.MinDate= DateTime.Now.AddDays(90);
+            DtpOnOdemeliBitisTarihi.MinDate = DateTime.Now.AddDays(90);
+        //    DtpOnOdemeliBitisTarihi.Value = DateTime.Now.AddDays(90);
             
 
         }
