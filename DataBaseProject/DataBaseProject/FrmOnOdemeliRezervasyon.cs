@@ -13,6 +13,7 @@ namespace DataBaseProject
 {
     public partial class FrmOnOdemeliRezervasyon : Form
     {
+        public int[] id = new int[10];
         DataBaseConnection baglanti = new DataBaseConnection();
         public FrmOnOdemeliRezervasyon()
         {
@@ -21,11 +22,11 @@ namespace DataBaseProject
         private void FrmOnOdemeliRezervasyon_Load(object sender, EventArgs e)
         {
 
-        //    DtpOnOdemeliBasTarihi.Value = DateTime.Now.AddDays(90);
-            DtpOnOdemeliBasTarihi.MinDate= DateTime.Now.AddDays(90);
+            //    DtpOnOdemeliBasTarihi.Value = DateTime.Now.AddDays(90);
+            DtpOnOdemeliBasTarihi.MinDate = DateTime.Now.AddDays(90);
             DtpOnOdemeliBitisTarihi.MinDate = DateTime.Now.AddDays(90);
-        //    DtpOnOdemeliBitisTarihi.Value = DateTime.Now.AddDays(90);
-            
+            //    DtpOnOdemeliBitisTarihi.Value = DateTime.Now.AddDays(90);
+
 
         }
 
@@ -33,20 +34,34 @@ namespace DataBaseProject
 
         {
 
-            baglanti.DbConnection();
-            string insertCustomer = "insert into Customer(CustomerName,CustomerSurname,CustomerMail,CreditCardNumber)" +
-                "values(@cusName,@cusSurname,@cusMail,@cusCard)";
-            SqlCommand InsertCustomer = new SqlCommand(insertCustomer, baglanti.DbConnection());
-            InsertCustomer.Parameters.AddWithValue("@cusName", TxtMusteriAd.Text);
-            InsertCustomer.Parameters.AddWithValue("@cusSurname", TxtMusteriSoyad.Text);
-            InsertCustomer.Parameters.AddWithValue("@cusMail", TxtMusteriMail.Text);
-            InsertCustomer.Parameters.AddWithValue("@cusCard", TxtKrediKartiNo.Text);
+
 
             double rezSuresi = Math.Ceiling(RezarvasyonSuresi().TotalDays);
             double KalanSure = Math.Ceiling(GunKontrol().TotalDays);
 
             {
                 TimeSpan timeSpan = DtpOnOdemeliBitisTarihi.Value - DtpOnOdemeliBasTarihi.Value;
+
+
+
+                //string insertRez = "insert into Reservation(ReservationType,CustomerID,Price,RoomID,ReservationDate,ReservationTime,ReservationCreationDate)" +
+                //    "values(@resType,@cusID,@price,@roomID,@resDate,@resTime,@resCreDate)";
+                //SqlCommand InsertRez = new SqlCommand(insertRez, baglanti.DbConnection());
+                //InsertRez.Parameters.AddWithValue("@resType", 1);
+                //InsertRez.Parameters.AddWithValue("@cusID",)
+
+
+                string getPrice = "select * from Hotel where LowestPriceID=@id";
+                baglanti.DbConnection();
+
+                SqlCommand GetPrice = new SqlCommand(getPrice, baglanti.DbConnection());
+                GetPrice.Parameters.AddWithValue("@id", 1);
+                SqlDataReader readerGetPrice = GetPrice.ExecuteReader();
+                if (readerGetPrice.Read())
+                {
+                    LblTutar.Text = (Convert.ToInt32(readerGetPrice["LowestPrice"].ToString()) * (0.75)).ToString();
+                }
+                //GÜN FARKINA GÖRE ÜCRETİN GÖSTERİLMESİ
 
                 if (timeSpan.Days < 1)
                 {
@@ -57,29 +72,24 @@ namespace DataBaseProject
                     LblRezSure.Text = timeSpan.Days.ToString();
                     LblRezSure.Text = rezSuresi.ToString();
                     LblKalanSure.Text = KalanSure.ToString();
-                    InsertCustomer.ExecuteNonQuery();
+                    LblToplamTutar.Text = ((Convert.ToDouble(readerGetPrice["LowestPrice"].ToString())) * (0.75) * (rezSuresi)).ToString();       //-->Toplam ücret gösterimi
+
+                    baglanti.DbConnection();
+                    string insertReservation = "insert into Reservation(ReservationType,CustomerID,Price,ReservationDate,ReservationTime,ReservationCreationDate)" +
+                       "values(@resType,@cusID,@price,@resDate,@resTime,@resCreDate)";
+                    SqlCommand InsertReservation = new SqlCommand(insertReservation, baglanti.DbConnection());
+                    InsertReservation.Parameters.AddWithValue("@resType", 1);
+                    InsertReservation.Parameters.AddWithValue("@cusID", id[0]);
+                    InsertReservation.Parameters.AddWithValue("@price", Convert.ToInt32(LblToplamTutar.Text));
+                    InsertReservation.Parameters.AddWithValue("@resDate", DtpOnOdemeliBasTarihi.Value);
+                    InsertReservation.Parameters.AddWithValue("@resTime", Convert.ToInt32(LblRezSure.Text));
+                    InsertReservation.Parameters.AddWithValue("@resCreDate", DateTime.Now);
+                    InsertReservation.ExecuteNonQuery();
+                    MessageBox.Show("Rezervasyon alındı");
                 }
-
-                //string insertRez = "insert into Reservation(ReservationType,CustomerID,Price,RoomID,ReservationDate,ReservationTime,ReservationCreationDate)" +
-                //    "values(@resType,@cusID,@price,@roomID,@resDate,@resTime,@resCreDate)";
-                //SqlCommand InsertRez = new SqlCommand(insertRez, baglanti.DbConnection());
-                //InsertRez.Parameters.AddWithValue("@resType", 1);
-                //InsertRez.Parameters.AddWithValue("@cusID",)
-
-                /*
-                string getPrice = "select * from Hotel where LowestPriceID=@id";
-                baglanti.DbConnection();
-
-                SqlCommand GetPrice = new SqlCommand(getPrice, baglanti.DbConnection());
-                GetPrice.Parameters.AddWithValue("@id", 1);
-                SqlDataReader readerGetPrice = GetPrice.ExecuteReader();
-                if (readerGetPrice.Read())
-                {
-                    LblTutar.Text = readerGetPrice["LowestPrice"].ToString();
-                }
-                readerGetPrice.Close();         //GÜN FARKINA GÖRE ÜCRETİN GÖSTERİLMESİ
+                readerGetPrice.Close();
                 GetPrice.Dispose();
-                baglanti.DbConnection().Close();*/
+                baglanti.DbConnection().Close();
             }
 
             TimeSpan RezarvasyonSuresi()
@@ -95,6 +105,15 @@ namespace DataBaseProject
                 return Fark;
             }
 
+
+        }
+
+        private void BtnGeri_Click(object sender, EventArgs e)
+        {
+            FrmRezervasyonSecimi frmRezervasyonSecimi = new FrmRezervasyonSecimi();
+            frmRezervasyonSecimi.id[0] = this.id[0];
+            frmRezervasyonSecimi.Show();
+            this.Hide();
         }
     }
 }

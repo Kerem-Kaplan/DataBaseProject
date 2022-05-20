@@ -41,16 +41,22 @@ namespace DataBaseProject
             {
                 MessageBox.Show("Şifreleri Aynı Giriniz");
             }
+            else if (TxtKrediKartNo.Text == "")
+            {
+                MessageBox.Show("Lütfen Kredi Kartı Giriniz");
+            }
+
             else
             {
                 connection.DbConnection();
-                string insertCustomer = "insert into Customer(CustomerName,CustomerSurname,CustomerMail,CustomerPassword)" +
-                    "values (@cusName,@cusSurname,@cusMail,@cusPassword)";
+                string insertCustomer = "insert into Customer(CustomerName,CustomerSurname,CustomerMail,CustomerPassword,CreditCardNumber)" +
+                    "values (@cusName,@cusSurname,@cusMail,@cusPassword,@cusCard)";
                 SqlCommand InsertCustomer = new SqlCommand(insertCustomer, connection.DbConnection());
                 InsertCustomer.Parameters.AddWithValue("@cusName", TxtMusİsim.Text);
                 InsertCustomer.Parameters.AddWithValue("@cusSurname", TxtMusSoyisim.Text);
                 InsertCustomer.Parameters.AddWithValue("@cusMail", TxtMusMail.Text);
                 InsertCustomer.Parameters.AddWithValue("@cusPassword", TxtMusSifre.Text);
+                InsertCustomer.Parameters.AddWithValue("@cusCard", TxtKrediKartNo.Text);
                 InsertCustomer.ExecuteNonQuery();
                 MessageBox.Show("Kayıt Başarılı");
                 FrmGirisYap frmGirisYap = new FrmGirisYap();

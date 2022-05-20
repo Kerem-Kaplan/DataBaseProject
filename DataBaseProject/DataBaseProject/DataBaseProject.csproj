@@ -109,6 +109,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Frm60GunOncedenRezervasyon.resx">
+      <DependentUpon>Frm60GunOncedenRezervasyon.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmBaslangıcSayfa.resx">
       <DependentUpon>FrmBaslangıcSayfa.cs</DependentUpon>
     </EmbeddedResource>

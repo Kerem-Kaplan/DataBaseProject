@@ -12,6 +12,7 @@ namespace DataBaseProject
 {
     public partial class FrmRezervasyonSecimi : Form
     {
+        public int[] id = new int[10];
         public FrmRezervasyonSecimi()
         {
             InitializeComponent();
@@ -20,7 +21,16 @@ namespace DataBaseProject
         private void BtnOnOdemeliRez_Click(object sender, EventArgs e)
         {
             FrmOnOdemeliRezervasyon frmOnOdemeliRezervasyon = new FrmOnOdemeliRezervasyon();
+            frmOnOdemeliRezervasyon.id[0] = this.id[0];
             frmOnOdemeliRezervasyon.Show();
+            this.Hide();
+        }
+
+        private void Btn60GunOnceRez_Click(object sender, EventArgs e)
+        {
+            Frm60GunOncedenRezervasyon frm60GunOncedenRezervasyon = new Frm60GunOncedenRezervasyon();
+            frm60GunOncedenRezervasyon.id[0] = this.id[0];
+            frm60GunOncedenRezervasyon.Show();
             this.Hide();
         }
     }

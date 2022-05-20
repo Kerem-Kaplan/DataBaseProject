@@ -37,27 +37,22 @@ namespace DataBaseProject
             this.LblRezBasTarihi = new System.Windows.Forms.Label();
             this.DtpOnOdemeliBitisTarihi = new System.Windows.Forms.DateTimePicker();
             this.LblRezBitisTarihi = new System.Windows.Forms.Label();
-            this.LblKrediKartNo = new System.Windows.Forms.Label();
-            this.TxtKrediKartiNo = new System.Windows.Forms.TextBox();
-            this.LblMusteriSoyad = new System.Windows.Forms.Label();
-            this.LblMusteriAd = new System.Windows.Forms.Label();
-            this.TxtMusteriAd = new System.Windows.Forms.TextBox();
-            this.TxtMusteriSoyad = new System.Windows.Forms.TextBox();
-            this.TxtMusteriMail = new System.Windows.Forms.TextBox();
-            this.LblMusteriMail = new System.Windows.Forms.Label();
             this.LblRezSure = new System.Windows.Forms.Label();
             this.LblRezSuresi = new System.Windows.Forms.Label();
             this.LblRezKalanSure = new System.Windows.Forms.Label();
             this.LblKalanSure = new System.Windows.Forms.Label();
+            this.LblToplamUcret = new System.Windows.Forms.Label();
+            this.LblToplamTutar = new System.Windows.Forms.Label();
+            this.BtnGeri = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // BtnRezYap
             // 
             this.BtnRezYap.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnRezYap.Location = new System.Drawing.Point(170, 564);
-            this.BtnRezYap.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BtnRezYap.Location = new System.Drawing.Point(324, 356);
+            this.BtnRezYap.Margin = new System.Windows.Forms.Padding(2);
             this.BtnRezYap.Name = "BtnRezYap";
-            this.BtnRezYap.Size = new System.Drawing.Size(183, 51);
+            this.BtnRezYap.Size = new System.Drawing.Size(171, 51);
             this.BtnRezYap.TabIndex = 5;
             this.BtnRezYap.Text = "Rezervasyon Yap";
             this.BtnRezYap.UseVisualStyleBackColor = true;
@@ -67,7 +62,7 @@ namespace DataBaseProject
             // 
             this.LblTutar.AutoSize = true;
             this.LblTutar.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblTutar.Location = new System.Drawing.Point(113, 118);
+            this.LblTutar.Location = new System.Drawing.Point(180, 129);
             this.LblTutar.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LblTutar.Name = "LblTutar";
             this.LblTutar.Size = new System.Drawing.Size(60, 24);
@@ -78,18 +73,18 @@ namespace DataBaseProject
             // 
             this.LblUcret.AutoSize = true;
             this.LblUcret.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblUcret.Location = new System.Drawing.Point(52, 118);
+            this.LblUcret.Location = new System.Drawing.Point(52, 129);
             this.LblUcret.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LblUcret.Name = "LblUcret";
-            this.LblUcret.Size = new System.Drawing.Size(59, 24);
+            this.LblUcret.Size = new System.Drawing.Size(124, 24);
             this.LblUcret.TabIndex = 3;
-            this.LblUcret.Text = "Ücret:";
+            this.LblUcret.Text = "Günlük Ücret:";
             // 
             // DtpOnOdemeliBasTarihi
             // 
             this.DtpOnOdemeliBasTarihi.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.DtpOnOdemeliBasTarihi.Location = new System.Drawing.Point(324, 189);
-            this.DtpOnOdemeliBasTarihi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DtpOnOdemeliBasTarihi.Margin = new System.Windows.Forms.Padding(2);
             this.DtpOnOdemeliBasTarihi.Name = "DtpOnOdemeliBasTarihi";
             this.DtpOnOdemeliBasTarihi.Size = new System.Drawing.Size(171, 20);
             this.DtpOnOdemeliBasTarihi.TabIndex = 6;
@@ -122,7 +117,7 @@ namespace DataBaseProject
             // 
             this.DtpOnOdemeliBitisTarihi.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.DtpOnOdemeliBitisTarihi.Location = new System.Drawing.Point(324, 256);
-            this.DtpOnOdemeliBitisTarihi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.DtpOnOdemeliBitisTarihi.Margin = new System.Windows.Forms.Padding(2);
             this.DtpOnOdemeliBitisTarihi.Name = "DtpOnOdemeliBitisTarihi";
             this.DtpOnOdemeliBitisTarihi.Size = new System.Drawing.Size(171, 20);
             this.DtpOnOdemeliBitisTarihi.TabIndex = 9;
@@ -138,91 +133,11 @@ namespace DataBaseProject
             this.LblRezBitisTarihi.TabIndex = 10;
             this.LblRezBitisTarihi.Text = "Rezervasyon Bitiş Tarihi:";
             // 
-            // LblKrediKartNo
-            // 
-            this.LblKrediKartNo.AutoSize = true;
-            this.LblKrediKartNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblKrediKartNo.Location = new System.Drawing.Point(52, 504);
-            this.LblKrediKartNo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.LblKrediKartNo.Name = "LblKrediKartNo";
-            this.LblKrediKartNo.Size = new System.Drawing.Size(130, 24);
-            this.LblKrediKartNo.TabIndex = 11;
-            this.LblKrediKartNo.Text = "Kredi Kartı No:";
-            // 
-            // TxtKrediKartiNo
-            // 
-            this.TxtKrediKartiNo.Location = new System.Drawing.Point(324, 509);
-            this.TxtKrediKartiNo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.TxtKrediKartiNo.MaxLength = 19;
-            this.TxtKrediKartiNo.Name = "TxtKrediKartiNo";
-            this.TxtKrediKartiNo.Size = new System.Drawing.Size(171, 20);
-            this.TxtKrediKartiNo.TabIndex = 12;
-            // 
-            // LblMusteriSoyad
-            // 
-            this.LblMusteriSoyad.AutoSize = true;
-            this.LblMusteriSoyad.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblMusteriSoyad.Location = new System.Drawing.Point(50, 375);
-            this.LblMusteriSoyad.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.LblMusteriSoyad.Name = "LblMusteriSoyad";
-            this.LblMusteriSoyad.Size = new System.Drawing.Size(80, 24);
-            this.LblMusteriSoyad.TabIndex = 13;
-            this.LblMusteriSoyad.Text = "Soyisim:";
-            // 
-            // LblMusteriAd
-            // 
-            this.LblMusteriAd.AutoSize = true;
-            this.LblMusteriAd.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblMusteriAd.Location = new System.Drawing.Point(52, 317);
-            this.LblMusteriAd.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.LblMusteriAd.Name = "LblMusteriAd";
-            this.LblMusteriAd.Size = new System.Drawing.Size(48, 24);
-            this.LblMusteriAd.TabIndex = 14;
-            this.LblMusteriAd.Text = "İsim:";
-            // 
-            // TxtMusteriAd
-            // 
-            this.TxtMusteriAd.Location = new System.Drawing.Point(324, 323);
-            this.TxtMusteriAd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.TxtMusteriAd.MaxLength = 19;
-            this.TxtMusteriAd.Name = "TxtMusteriAd";
-            this.TxtMusteriAd.Size = new System.Drawing.Size(171, 20);
-            this.TxtMusteriAd.TabIndex = 15;
-            // 
-            // TxtMusteriSoyad
-            // 
-            this.TxtMusteriSoyad.Location = new System.Drawing.Point(324, 380);
-            this.TxtMusteriSoyad.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.TxtMusteriSoyad.MaxLength = 19;
-            this.TxtMusteriSoyad.Name = "TxtMusteriSoyad";
-            this.TxtMusteriSoyad.Size = new System.Drawing.Size(171, 20);
-            this.TxtMusteriSoyad.TabIndex = 16;
-            // 
-            // TxtMusteriMail
-            // 
-            this.TxtMusteriMail.Location = new System.Drawing.Point(324, 441);
-            this.TxtMusteriMail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.TxtMusteriMail.MaxLength = 19;
-            this.TxtMusteriMail.Name = "TxtMusteriMail";
-            this.TxtMusteriMail.Size = new System.Drawing.Size(171, 20);
-            this.TxtMusteriMail.TabIndex = 18;
-            // 
-            // LblMusteriMail
-            // 
-            this.LblMusteriMail.AutoSize = true;
-            this.LblMusteriMail.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblMusteriMail.Location = new System.Drawing.Point(52, 436);
-            this.LblMusteriMail.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.LblMusteriMail.Name = "LblMusteriMail";
-            this.LblMusteriMail.Size = new System.Drawing.Size(49, 24);
-            this.LblMusteriMail.TabIndex = 17;
-            this.LblMusteriMail.Text = "Mail:";
-            // 
             // LblRezSure
             // 
             this.LblRezSure.AutoSize = true;
             this.LblRezSure.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.LblRezSure.Location = new System.Drawing.Point(689, 275);
+            this.LblRezSure.Location = new System.Drawing.Point(823, 220);
             this.LblRezSure.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LblRezSure.Name = "LblRezSure";
             this.LblRezSure.Size = new System.Drawing.Size(95, 36);
@@ -233,7 +148,7 @@ namespace DataBaseProject
             // 
             this.LblRezSuresi.AutoSize = true;
             this.LblRezSuresi.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.LblRezSuresi.Location = new System.Drawing.Point(530, 275);
+            this.LblRezSuresi.Location = new System.Drawing.Point(568, 220);
             this.LblRezSuresi.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LblRezSuresi.Name = "LblRezSuresi";
             this.LblRezSuresi.Size = new System.Drawing.Size(161, 36);
@@ -244,7 +159,7 @@ namespace DataBaseProject
             // 
             this.LblRezKalanSure.AutoSize = true;
             this.LblRezKalanSure.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.LblRezKalanSure.Location = new System.Drawing.Point(499, 184);
+            this.LblRezKalanSure.Location = new System.Drawing.Point(568, 129);
             this.LblRezKalanSure.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LblRezKalanSure.Name = "LblRezKalanSure";
             this.LblRezKalanSure.Size = new System.Drawing.Size(247, 36);
@@ -255,30 +170,59 @@ namespace DataBaseProject
             // 
             this.LblKalanSure.AutoSize = true;
             this.LblKalanSure.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.LblKalanSure.Location = new System.Drawing.Point(740, 184);
+            this.LblKalanSure.Location = new System.Drawing.Point(823, 129);
             this.LblKalanSure.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LblKalanSure.Name = "LblKalanSure";
             this.LblKalanSure.Size = new System.Drawing.Size(95, 36);
             this.LblKalanSure.TabIndex = 21;
             this.LblKalanSure.Text = "label4";
             // 
+            // LblToplamUcret
+            // 
+            this.LblToplamUcret.AutoSize = true;
+            this.LblToplamUcret.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.LblToplamUcret.Location = new System.Drawing.Point(568, 292);
+            this.LblToplamUcret.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LblToplamUcret.Name = "LblToplamUcret";
+            this.LblToplamUcret.Size = new System.Drawing.Size(200, 36);
+            this.LblToplamUcret.TabIndex = 23;
+            this.LblToplamUcret.Text = "Toplam Ücret:";
+            // 
+            // LblToplamTutar
+            // 
+            this.LblToplamTutar.AutoSize = true;
+            this.LblToplamTutar.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.LblToplamTutar.Location = new System.Drawing.Point(823, 292);
+            this.LblToplamTutar.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LblToplamTutar.Name = "LblToplamTutar";
+            this.LblToplamTutar.Size = new System.Drawing.Size(95, 36);
+            this.LblToplamTutar.TabIndex = 24;
+            this.LblToplamTutar.Text = "label1";
+            // 
+            // BtnGeri
+            // 
+            this.BtnGeri.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnGeri.Location = new System.Drawing.Point(324, 430);
+            this.BtnGeri.Margin = new System.Windows.Forms.Padding(2);
+            this.BtnGeri.Name = "BtnGeri";
+            this.BtnGeri.Size = new System.Drawing.Size(171, 51);
+            this.BtnGeri.TabIndex = 25;
+            this.BtnGeri.Text = "Geri";
+            this.BtnGeri.UseVisualStyleBackColor = true;
+            this.BtnGeri.Click += new System.EventHandler(this.BtnGeri_Click);
+            // 
             // FrmOnOdemeliRezervasyon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1046, 625);
+            this.Controls.Add(this.BtnGeri);
+            this.Controls.Add(this.LblToplamTutar);
+            this.Controls.Add(this.LblToplamUcret);
             this.Controls.Add(this.LblRezKalanSure);
             this.Controls.Add(this.LblKalanSure);
             this.Controls.Add(this.LblRezSuresi);
             this.Controls.Add(this.LblRezSure);
-            this.Controls.Add(this.TxtMusteriMail);
-            this.Controls.Add(this.LblMusteriMail);
-            this.Controls.Add(this.TxtMusteriSoyad);
-            this.Controls.Add(this.TxtMusteriAd);
-            this.Controls.Add(this.LblMusteriAd);
-            this.Controls.Add(this.LblMusteriSoyad);
-            this.Controls.Add(this.TxtKrediKartiNo);
-            this.Controls.Add(this.LblKrediKartNo);
             this.Controls.Add(this.LblRezBitisTarihi);
             this.Controls.Add(this.DtpOnOdemeliBitisTarihi);
             this.Controls.Add(this.LblRezBasTarihi);
@@ -287,7 +231,7 @@ namespace DataBaseProject
             this.Controls.Add(this.BtnRezYap);
             this.Controls.Add(this.LblTutar);
             this.Controls.Add(this.LblUcret);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmOnOdemeliRezervasyon";
             this.Text = "FrmOnOdemeliRezervasyon";
             this.Load += new System.EventHandler(this.FrmOnOdemeliRezervasyon_Load);
@@ -306,17 +250,12 @@ namespace DataBaseProject
         private System.Windows.Forms.Label LblRezBasTarihi;
         private System.Windows.Forms.DateTimePicker DtpOnOdemeliBitisTarihi;
         private System.Windows.Forms.Label LblRezBitisTarihi;
-        private System.Windows.Forms.Label LblKrediKartNo;
-        private System.Windows.Forms.TextBox TxtKrediKartiNo;
-        private System.Windows.Forms.Label LblMusteriSoyad;
-        private System.Windows.Forms.Label LblMusteriAd;
-        private System.Windows.Forms.TextBox TxtMusteriAd;
-        private System.Windows.Forms.TextBox TxtMusteriSoyad;
-        private System.Windows.Forms.TextBox TxtMusteriMail;
-        private System.Windows.Forms.Label LblMusteriMail;
         private System.Windows.Forms.Label LblRezSure;
         private System.Windows.Forms.Label LblRezSuresi;
         private System.Windows.Forms.Label LblRezKalanSure;
         private System.Windows.Forms.Label LblKalanSure;
+        private System.Windows.Forms.Label LblToplamUcret;
+        private System.Windows.Forms.Label LblToplamTutar;
+        private System.Windows.Forms.Button BtnGeri;
     }
 }

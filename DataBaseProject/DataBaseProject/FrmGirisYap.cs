@@ -13,6 +13,7 @@ namespace DataBaseProject
 {
     public partial class FrmGirisYap : Form
     {
+        public int[] id = new int[10];
         public FrmGirisYap()
         {
             InitializeComponent();
@@ -29,8 +30,11 @@ namespace DataBaseProject
             SqlDataReader readerGetCustomer = GetCustomer.ExecuteReader();
             if (readerGetCustomer.Read())
             {
+                id[0] = Convert.ToInt32(readerGetCustomer["CustomerID"].ToString());
+                MessageBox.Show(id[0].ToString());
                 MessageBox.Show("Giriş Başarılı");
                 FrmAnasayfa frmAnasayfa = new FrmAnasayfa();
+                frmAnasayfa.id[0] = this.id[0];
                 frmAnasayfa.Show();
                 this.Hide();
             }
