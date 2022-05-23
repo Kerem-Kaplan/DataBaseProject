@@ -22,6 +22,7 @@ namespace DataBaseProject
             InitializeComponent();
         }
 
+<<<<<<< HEAD
         private void FrmStandartRezervasyon_Load(object sender, EventArgs e)
         {
             DtpTarih.MinDate = DateTime.Now;
@@ -70,5 +71,8 @@ namespace DataBaseProject
                 MessageBox.Show("Rezervasyon alındı");
             }
         }
+=======
+        
+>>>>>>> eaa6f0aa9e7a65bfc93a96b84e8bad6e478a9aac
     }
 }

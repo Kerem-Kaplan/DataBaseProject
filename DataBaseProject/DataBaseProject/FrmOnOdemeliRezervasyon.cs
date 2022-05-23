@@ -33,23 +33,22 @@ namespace DataBaseProject
         private void BtnRezYap_Click(object sender, EventArgs e)
 
         {
-
-
-
             double rezSuresi = Math.Ceiling(RezarvasyonSuresi().TotalDays);
             double KalanSure = Math.Ceiling(GunKontrol().TotalDays);
 
             {
                 TimeSpan timeSpan = DtpOnOdemeliBitisTarihi.Value - DtpOnOdemeliBasTarihi.Value;
 
-
-
                 //string insertRez = "insert into Reservation(ReservationType,CustomerID,Price,RoomID,ReservationDate,ReservationTime,ReservationCreationDate)" +
                 //    "values(@resType,@cusID,@price,@roomID,@resDate,@resTime,@resCreDate)";
                 //SqlCommand InsertRez = new SqlCommand(insertRez, baglanti.DbConnection());
                 //InsertRez.Parameters.AddWithValue("@resType", 1);
                 //InsertRez.Parameters.AddWithValue("@cusID",)
-
+                string insertCustomer = "update Customer set CreditCardNumber=@cardNo where CustomerID=@id";
+                SqlCommand InsertCustomer = new SqlCommand(insertCustomer, baglanti.DbConnection());
+                InsertCustomer.Parameters.AddWithValue("@cardNo", TxtKrediKartNo.Text);
+                InsertCustomer.Parameters.AddWithValue("@id", id[0]);
+                InsertCustomer.ExecuteNonQuery();
 
                 string getPrice = "select * from Hotel where LowestPriceID=@id";
                 baglanti.DbConnection();
@@ -114,6 +113,11 @@ namespace DataBaseProject
             frmRezervasyonSecimi.id[0] = this.id[0];
             frmRezervasyonSecimi.Show();
             this.Hide();
+        }
+
+        private void TxtKrediKartNo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
         }
     }
 }

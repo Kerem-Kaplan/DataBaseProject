@@ -11,7 +11,7 @@ namespace DataBaseProject
     {
         public SqlConnection DbConnection()
         {
-            SqlConnection connection = new SqlConnection("Data Source = DESKTOP; Initial Catalog = DbDataBaseProject; Integrated Security = True");
+            SqlConnection connection = new SqlConnection("Data Source = LAPTOP-633OD787; Initial Catalog = DbDataBaseProject; Integrated Security = True");
             connection.Open();
             return connection;
         }

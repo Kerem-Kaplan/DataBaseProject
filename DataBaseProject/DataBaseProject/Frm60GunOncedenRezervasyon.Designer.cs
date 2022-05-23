@@ -44,7 +44,11 @@ namespace DataBaseProject
             this.LblGunSayisi = new System.Windows.Forms.Label();
             this.BtnGeri = new System.Windows.Forms.Button();
             this.TxtKrediKartNo = new System.Windows.Forms.TextBox();
+<<<<<<< HEAD
             this.LblKrediKartNo = new System.Windows.Forms.Label();
+=======
+            this.LblKrediKarti = new System.Windows.Forms.Label();
+>>>>>>> eaa6f0aa9e7a65bfc93a96b84e8bad6e478a9aac
             this.SuspendLayout();
             // 
             // LblİletisimMail
@@ -61,7 +65,11 @@ namespace DataBaseProject
             // BtnRezYap
             // 
             this.BtnRezYap.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+<<<<<<< HEAD
             this.BtnRezYap.Location = new System.Drawing.Point(577, 406);
+=======
+            this.BtnRezYap.Location = new System.Drawing.Point(591, 501);
+>>>>>>> eaa6f0aa9e7a65bfc93a96b84e8bad6e478a9aac
             this.BtnRezYap.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BtnRezYap.Name = "BtnRezYap";
             this.BtnRezYap.Size = new System.Drawing.Size(241, 42);
@@ -186,7 +194,11 @@ namespace DataBaseProject
             // BtnGeri
             // 
             this.BtnGeri.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+<<<<<<< HEAD
             this.BtnGeri.Location = new System.Drawing.Point(577, 474);
+=======
+            this.BtnGeri.Location = new System.Drawing.Point(591, 569);
+>>>>>>> eaa6f0aa9e7a65bfc93a96b84e8bad6e478a9aac
             this.BtnGeri.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BtnGeri.Name = "BtnGeri";
             this.BtnGeri.Size = new System.Drawing.Size(241, 42);
@@ -197,6 +209,7 @@ namespace DataBaseProject
             // 
             // TxtKrediKartNo
             // 
+<<<<<<< HEAD
             this.TxtKrediKartNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.TxtKrediKartNo.Location = new System.Drawing.Point(1041, 112);
             this.TxtKrediKartNo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -213,6 +226,26 @@ namespace DataBaseProject
             this.LblKrediKartNo.Size = new System.Drawing.Size(184, 32);
             this.LblKrediKartNo.TabIndex = 18;
             this.LblKrediKartNo.Text = "Kredi Kart No";
+=======
+            this.TxtKrediKartNo.Location = new System.Drawing.Point(513, 432);
+            this.TxtKrediKartNo.Margin = new System.Windows.Forms.Padding(4);
+            this.TxtKrediKartNo.MaxLength = 16;
+            this.TxtKrediKartNo.Name = "TxtKrediKartNo";
+            this.TxtKrediKartNo.Size = new System.Drawing.Size(319, 22);
+            this.TxtKrediKartNo.TabIndex = 19;
+            this.TxtKrediKartNo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtKrediKartNo_KeyPress);
+            // 
+            // LblKrediKarti
+            // 
+            this.LblKrediKarti.AutoSize = true;
+            this.LblKrediKarti.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblKrediKarti.Location = new System.Drawing.Point(148, 426);
+            this.LblKrediKarti.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LblKrediKarti.Name = "LblKrediKarti";
+            this.LblKrediKarti.Size = new System.Drawing.Size(170, 29);
+            this.LblKrediKarti.TabIndex = 18;
+            this.LblKrediKarti.Text = "Kredi Kartı No:";
+>>>>>>> eaa6f0aa9e7a65bfc93a96b84e8bad6e478a9aac
             // 
             // Frm60GunOncedenRezervasyon
             // 
@@ -220,7 +253,11 @@ namespace DataBaseProject
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1744, 892);
             this.Controls.Add(this.TxtKrediKartNo);
+<<<<<<< HEAD
             this.Controls.Add(this.LblKrediKartNo);
+=======
+            this.Controls.Add(this.LblKrediKarti);
+>>>>>>> eaa6f0aa9e7a65bfc93a96b84e8bad6e478a9aac
             this.Controls.Add(this.BtnGeri);
             this.Controls.Add(this.TxtGunSayisi);
             this.Controls.Add(this.LblGunSayisi);
@@ -261,6 +298,10 @@ namespace DataBaseProject
         private System.Windows.Forms.Label LblGunSayisi;
         private System.Windows.Forms.Button BtnGeri;
         private System.Windows.Forms.TextBox TxtKrediKartNo;
+<<<<<<< HEAD
         private System.Windows.Forms.Label LblKrediKartNo;
+=======
+        private System.Windows.Forms.Label LblKrediKarti;
+>>>>>>> eaa6f0aa9e7a65bfc93a96b84e8bad6e478a9aac
     }
 }

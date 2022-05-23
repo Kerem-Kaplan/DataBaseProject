@@ -34,11 +34,19 @@ namespace DataBaseProject
             this.Hide();
         }
 
+<<<<<<< HEAD
         private void BtnStandartRez_Click(object sender, EventArgs e)
         {
             FrmStandartRezervasyon frmStandartRezervasyon = new FrmStandartRezervasyon();
             frmStandartRezervasyon.id[0] = this.id[0];
             frmStandartRezervasyon.Show();
+=======
+        private void BtnTesvikRez_Click(object sender, EventArgs e)
+        {
+            FrmTesvikRezervasyon frmTesvikRezervasyon = new FrmTesvikRezervasyon();
+            frmTesvikRezervasyon.id[0] = this.id[0];
+            frmTesvikRezervasyon.Show();
+>>>>>>> eaa6f0aa9e7a65bfc93a96b84e8bad6e478a9aac
             this.Hide();
         }
     }

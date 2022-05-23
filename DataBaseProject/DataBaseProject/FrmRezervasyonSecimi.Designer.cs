@@ -80,6 +80,7 @@ namespace DataBaseProject
             this.BtnTesvikRez.TabIndex = 3;
             this.BtnTesvikRez.Text = "Teşvik Rezervasyon";
             this.BtnTesvikRez.UseVisualStyleBackColor = true;
+            this.BtnTesvikRez.Click += new System.EventHandler(this.BtnTesvikRez_Click);
             // 
             // Btn60GunOnceRez
             // 
