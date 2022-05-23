@@ -43,24 +43,28 @@ namespace DataBaseProject
             this.TxtGunSayisi = new System.Windows.Forms.TextBox();
             this.LblGunSayisi = new System.Windows.Forms.Label();
             this.BtnGeri = new System.Windows.Forms.Button();
+            this.TxtKrediKartNo = new System.Windows.Forms.TextBox();
+            this.LblKrediKarti = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // LblİletisimMail
             // 
             this.LblİletisimMail.AutoSize = true;
             this.LblİletisimMail.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblİletisimMail.Location = new System.Drawing.Point(111, 175);
+            this.LblİletisimMail.Location = new System.Drawing.Point(148, 215);
+            this.LblİletisimMail.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblİletisimMail.Name = "LblİletisimMail";
-            this.LblİletisimMail.Size = new System.Drawing.Size(49, 24);
+            this.LblİletisimMail.Size = new System.Drawing.Size(64, 29);
             this.LblİletisimMail.TabIndex = 0;
             this.LblİletisimMail.Text = "Mail:";
             // 
             // BtnRezYap
             // 
             this.BtnRezYap.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnRezYap.Location = new System.Drawing.Point(433, 330);
+            this.BtnRezYap.Location = new System.Drawing.Point(591, 501);
+            this.BtnRezYap.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BtnRezYap.Name = "BtnRezYap";
-            this.BtnRezYap.Size = new System.Drawing.Size(181, 34);
+            this.BtnRezYap.Size = new System.Drawing.Size(241, 42);
             this.BtnRezYap.TabIndex = 1;
             this.BtnRezYap.Text = "Rezervasyon Yap";
             this.BtnRezYap.UseVisualStyleBackColor = true;
@@ -68,18 +72,20 @@ namespace DataBaseProject
             // 
             // TxtİstenenMail
             // 
-            this.TxtİstenenMail.Location = new System.Drawing.Point(385, 180);
+            this.TxtİstenenMail.Location = new System.Drawing.Point(513, 222);
+            this.TxtİstenenMail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.TxtİstenenMail.Name = "TxtİstenenMail";
-            this.TxtİstenenMail.Size = new System.Drawing.Size(240, 20);
+            this.TxtİstenenMail.Size = new System.Drawing.Size(319, 22);
             this.TxtİstenenMail.TabIndex = 2;
             // 
             // LblTutar
             // 
             this.LblTutar.AutoSize = true;
             this.LblTutar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblTutar.Location = new System.Drawing.Point(250, 88);
+            this.LblTutar.Location = new System.Drawing.Point(333, 108);
+            this.LblTutar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblTutar.Name = "LblTutar";
-            this.LblTutar.Size = new System.Drawing.Size(50, 24);
+            this.LblTutar.Size = new System.Drawing.Size(66, 29);
             this.LblTutar.TabIndex = 5;
             this.LblTutar.Text = "label";
             // 
@@ -87,9 +93,10 @@ namespace DataBaseProject
             // 
             this.LblUcret.AutoSize = true;
             this.LblUcret.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblUcret.Location = new System.Drawing.Point(111, 88);
+            this.LblUcret.Location = new System.Drawing.Point(148, 108);
+            this.LblUcret.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblUcret.Name = "LblUcret";
-            this.LblUcret.Size = new System.Drawing.Size(124, 24);
+            this.LblUcret.Size = new System.Drawing.Size(157, 29);
             this.LblUcret.TabIndex = 6;
             this.LblUcret.Text = "Günlük Ücret:";
             // 
@@ -97,29 +104,29 @@ namespace DataBaseProject
             // 
             this.LblRezBasTarihi.AutoSize = true;
             this.LblRezBasTarihi.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblRezBasTarihi.Location = new System.Drawing.Point(111, 228);
-            this.LblRezBasTarihi.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LblRezBasTarihi.Location = new System.Drawing.Point(148, 281);
             this.LblRezBasTarihi.Name = "LblRezBasTarihi";
-            this.LblRezBasTarihi.Size = new System.Drawing.Size(262, 24);
+            this.LblRezBasTarihi.Size = new System.Drawing.Size(336, 29);
             this.LblRezBasTarihi.TabIndex = 10;
             this.LblRezBasTarihi.Text = "Rezervasyon Başlangıç Tarihi:";
             // 
             // Dtp60GunOncedenBasTarihi
             // 
             this.Dtp60GunOncedenBasTarihi.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.Dtp60GunOncedenBasTarihi.Location = new System.Drawing.Point(385, 233);
-            this.Dtp60GunOncedenBasTarihi.Margin = new System.Windows.Forms.Padding(2);
+            this.Dtp60GunOncedenBasTarihi.Location = new System.Drawing.Point(513, 287);
+            this.Dtp60GunOncedenBasTarihi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Dtp60GunOncedenBasTarihi.Name = "Dtp60GunOncedenBasTarihi";
-            this.Dtp60GunOncedenBasTarihi.Size = new System.Drawing.Size(240, 20);
+            this.Dtp60GunOncedenBasTarihi.Size = new System.Drawing.Size(319, 22);
             this.Dtp60GunOncedenBasTarihi.TabIndex = 9;
             // 
             // LblRezSuresi
             // 
             this.LblRezSuresi.AutoSize = true;
             this.LblRezSuresi.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblRezSuresi.Location = new System.Drawing.Point(802, 175);
+            this.LblRezSuresi.Location = new System.Drawing.Point(1069, 215);
+            this.LblRezSuresi.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblRezSuresi.Name = "LblRezSuresi";
-            this.LblRezSuresi.Size = new System.Drawing.Size(50, 24);
+            this.LblRezSuresi.Size = new System.Drawing.Size(66, 29);
             this.LblRezSuresi.TabIndex = 11;
             this.LblRezSuresi.Text = "label";
             // 
@@ -127,9 +134,10 @@ namespace DataBaseProject
             // 
             this.LblRezSure.AutoSize = true;
             this.LblRezSure.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblRezSure.Location = new System.Drawing.Point(668, 175);
+            this.LblRezSure.Location = new System.Drawing.Point(891, 215);
+            this.LblRezSure.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblRezSure.Name = "LblRezSure";
-            this.LblRezSure.Size = new System.Drawing.Size(88, 24);
+            this.LblRezSure.Size = new System.Drawing.Size(112, 29);
             this.LblRezSure.TabIndex = 12;
             this.LblRezSure.Text = "RezSure:";
             // 
@@ -137,9 +145,10 @@ namespace DataBaseProject
             // 
             this.LblToplamUcret.AutoSize = true;
             this.LblToplamUcret.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblToplamUcret.Location = new System.Drawing.Point(668, 231);
+            this.LblToplamUcret.Location = new System.Drawing.Point(891, 284);
+            this.LblToplamUcret.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblToplamUcret.Name = "LblToplamUcret";
-            this.LblToplamUcret.Size = new System.Drawing.Size(128, 24);
+            this.LblToplamUcret.Size = new System.Drawing.Size(165, 29);
             this.LblToplamUcret.TabIndex = 14;
             this.LblToplamUcret.Text = "Toplam Ucret:";
             // 
@@ -147,17 +156,19 @@ namespace DataBaseProject
             // 
             this.LblToplamTutar.AutoSize = true;
             this.LblToplamTutar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblToplamTutar.Location = new System.Drawing.Point(802, 233);
+            this.LblToplamTutar.Location = new System.Drawing.Point(1069, 287);
+            this.LblToplamTutar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblToplamTutar.Name = "LblToplamTutar";
-            this.LblToplamTutar.Size = new System.Drawing.Size(50, 24);
+            this.LblToplamTutar.Size = new System.Drawing.Size(66, 29);
             this.LblToplamTutar.TabIndex = 13;
             this.LblToplamTutar.Text = "label";
             // 
             // TxtGunSayisi
             // 
-            this.TxtGunSayisi.Location = new System.Drawing.Point(385, 291);
+            this.TxtGunSayisi.Location = new System.Drawing.Point(513, 358);
+            this.TxtGunSayisi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.TxtGunSayisi.Name = "TxtGunSayisi";
-            this.TxtGunSayisi.Size = new System.Drawing.Size(240, 20);
+            this.TxtGunSayisi.Size = new System.Drawing.Size(319, 22);
             this.TxtGunSayisi.TabIndex = 16;
             this.TxtGunSayisi.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtGunSayisi_KeyPress);
             // 
@@ -165,28 +176,53 @@ namespace DataBaseProject
             // 
             this.LblGunSayisi.AutoSize = true;
             this.LblGunSayisi.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblGunSayisi.Location = new System.Drawing.Point(111, 286);
+            this.LblGunSayisi.Location = new System.Drawing.Point(148, 352);
+            this.LblGunSayisi.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.LblGunSayisi.Name = "LblGunSayisi";
-            this.LblGunSayisi.Size = new System.Drawing.Size(99, 24);
+            this.LblGunSayisi.Size = new System.Drawing.Size(127, 29);
             this.LblGunSayisi.TabIndex = 15;
             this.LblGunSayisi.Text = "Gün Sayisi";
             // 
             // BtnGeri
             // 
             this.BtnGeri.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnGeri.Location = new System.Drawing.Point(433, 385);
+            this.BtnGeri.Location = new System.Drawing.Point(591, 569);
+            this.BtnGeri.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BtnGeri.Name = "BtnGeri";
-            this.BtnGeri.Size = new System.Drawing.Size(181, 34);
+            this.BtnGeri.Size = new System.Drawing.Size(241, 42);
             this.BtnGeri.TabIndex = 17;
             this.BtnGeri.Text = "Geri";
             this.BtnGeri.UseVisualStyleBackColor = true;
             this.BtnGeri.Click += new System.EventHandler(this.BtnGeri_Click);
             // 
+            // TxtKrediKartNo
+            // 
+            this.TxtKrediKartNo.Location = new System.Drawing.Point(513, 432);
+            this.TxtKrediKartNo.Margin = new System.Windows.Forms.Padding(4);
+            this.TxtKrediKartNo.MaxLength = 16;
+            this.TxtKrediKartNo.Name = "TxtKrediKartNo";
+            this.TxtKrediKartNo.Size = new System.Drawing.Size(319, 22);
+            this.TxtKrediKartNo.TabIndex = 19;
+            this.TxtKrediKartNo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtKrediKartNo_KeyPress);
+            // 
+            // LblKrediKarti
+            // 
+            this.LblKrediKarti.AutoSize = true;
+            this.LblKrediKarti.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblKrediKarti.Location = new System.Drawing.Point(148, 426);
+            this.LblKrediKarti.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LblKrediKarti.Name = "LblKrediKarti";
+            this.LblKrediKarti.Size = new System.Drawing.Size(170, 29);
+            this.LblKrediKarti.TabIndex = 18;
+            this.LblKrediKarti.Text = "Kredi Kartı No:";
+            // 
             // Frm60GunOncedenRezervasyon
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1308, 725);
+            this.ClientSize = new System.Drawing.Size(1744, 892);
+            this.Controls.Add(this.TxtKrediKartNo);
+            this.Controls.Add(this.LblKrediKarti);
             this.Controls.Add(this.BtnGeri);
             this.Controls.Add(this.TxtGunSayisi);
             this.Controls.Add(this.LblGunSayisi);
@@ -201,6 +237,7 @@ namespace DataBaseProject
             this.Controls.Add(this.TxtİstenenMail);
             this.Controls.Add(this.BtnRezYap);
             this.Controls.Add(this.LblİletisimMail);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Frm60GunOncedenRezervasyon";
             this.Text = "Frm60GunOncedenRezervasyon";
             this.Load += new System.EventHandler(this.Frm60GunOncedenRezervasyon_Load);
@@ -225,5 +262,7 @@ namespace DataBaseProject
         private System.Windows.Forms.TextBox TxtGunSayisi;
         private System.Windows.Forms.Label LblGunSayisi;
         private System.Windows.Forms.Button BtnGeri;
+        private System.Windows.Forms.TextBox TxtKrediKartNo;
+        private System.Windows.Forms.Label LblKrediKarti;
     }
 }

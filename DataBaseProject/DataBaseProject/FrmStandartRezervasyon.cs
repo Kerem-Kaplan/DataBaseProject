@@ -17,9 +17,6 @@ namespace DataBaseProject
             InitializeComponent();
         }
 
-        private void FrmStandartRezervasyon_Load(object sender, EventArgs e)
-        {
-            MessageBox.Show("merhaba");
-        }
+        
     }
 }

@@ -35,7 +35,7 @@ namespace DataBaseProject
                 LblUcret.Text = (Convert.ToInt32(readerGetPrice["LowestPrice"].ToString()) * (0.85)).ToString();
             }
 
-            string insertCustomer = "update Customer set CustomerİnformationMail=@cusInfoMail where CustomerID=@id";
+            string insertCustomer = "update Customer set CustomerİnformationMail=@cusInfoMail and CreditCardNumber=@cardNo where CustomerID=@id";
 
             if (Convert.ToInt32(TxtGunSayisi.Text) < 1)
             {
@@ -47,6 +47,7 @@ namespace DataBaseProject
                 LblToplamTutar.Text = ((Convert.ToDouble(readerGetPrice["LowestPrice"].ToString())) * (0.85) * (Convert.ToInt32(TxtGunSayisi.Text))).ToString();
                 SqlCommand InsertCustomer = new SqlCommand(insertCustomer, baglanti.DbConnection());
                 InsertCustomer.Parameters.AddWithValue("@cusInfoMail", TxtİstenenMail.Text);
+                InsertCustomer.Parameters.AddWithValue("@cardNo", TxtKrediKartNo.Text);
                 InsertCustomer.Parameters.AddWithValue("@id", id[0]);
                 InsertCustomer.ExecuteNonQuery();
 
@@ -83,6 +84,11 @@ namespace DataBaseProject
             frmRezervasyonSecimi.id[0] = this.id[0];
             frmRezervasyonSecimi.Show();
             this.Hide();
+        }
+
+        private void TxtKrediKartNo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
         }
     }
 }

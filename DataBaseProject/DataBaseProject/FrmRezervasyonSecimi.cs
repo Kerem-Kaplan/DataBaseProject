@@ -33,5 +33,13 @@ namespace DataBaseProject
             frm60GunOncedenRezervasyon.Show();
             this.Hide();
         }
+
+        private void BtnTesvikRez_Click(object sender, EventArgs e)
+        {
+            FrmTesvikRezervasyon frmTesvikRezervasyon = new FrmTesvikRezervasyon();
+            frmTesvikRezervasyon.id[0] = this.id[0];
+            frmTesvikRezervasyon.Show();
+            this.Hide();
+        }
     }
 }
