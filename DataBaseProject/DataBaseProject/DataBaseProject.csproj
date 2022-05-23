@@ -133,6 +133,9 @@
     <EmbeddedResource Include="FrmRezervasyonSecimi.resx">
       <DependentUpon>FrmRezervasyonSecimi.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmStandartRezervasyon.resx">
+      <DependentUpon>FrmStandartRezervasyon.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmTesvikRezervasyon.resx">
       <DependentUpon>FrmTesvikRezervasyon.cs</DependentUpon>
     </EmbeddedResource>

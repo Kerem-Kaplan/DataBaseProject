@@ -23,7 +23,6 @@ namespace DataBaseProject
         private void BtnRezYap_Click(object sender, EventArgs e)
         {
 
-
             string getPrice = "select * from Hotel where LowestPriceID=@id";
             baglanti.DbConnection();
 
@@ -61,6 +60,7 @@ namespace DataBaseProject
                 InsertReservation.Parameters.AddWithValue("@resTime", Convert.ToInt32(TxtGunSayisi.Text));
                 InsertReservation.Parameters.AddWithValue("@resCreDate", DateTime.Now);
                 InsertReservation.ExecuteNonQuery();
+                baglanti.DbConnection().Close();
                 MessageBox.Show("Rezervasyon alındı");
             }
 

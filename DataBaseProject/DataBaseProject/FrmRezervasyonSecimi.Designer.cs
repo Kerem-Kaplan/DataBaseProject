@@ -40,20 +40,19 @@ namespace DataBaseProject
             // 
             this.LblBİlgilendirme.AutoSize = true;
             this.LblBİlgilendirme.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblBİlgilendirme.Location = new System.Drawing.Point(202, 35);
-            this.LblBİlgilendirme.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LblBİlgilendirme.Location = new System.Drawing.Point(269, 43);
             this.LblBİlgilendirme.Name = "LblBİlgilendirme";
-            this.LblBİlgilendirme.Size = new System.Drawing.Size(160, 24);
+            this.LblBİlgilendirme.Size = new System.Drawing.Size(203, 29);
             this.LblBİlgilendirme.TabIndex = 0;
             this.LblBİlgilendirme.Text = "İŞLEMİ SEÇİNİZ";
             // 
             // BtnOnOdemeliRez
             // 
             this.BtnOnOdemeliRez.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnOnOdemeliRez.Location = new System.Drawing.Point(74, 135);
-            this.BtnOnOdemeliRez.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BtnOnOdemeliRez.Location = new System.Drawing.Point(99, 166);
+            this.BtnOnOdemeliRez.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BtnOnOdemeliRez.Name = "BtnOnOdemeliRez";
-            this.BtnOnOdemeliRez.Size = new System.Drawing.Size(182, 89);
+            this.BtnOnOdemeliRez.Size = new System.Drawing.Size(243, 110);
             this.BtnOnOdemeliRez.TabIndex = 1;
             this.BtnOnOdemeliRez.Text = "Ön Ödemeli Rezervasyon";
             this.BtnOnOdemeliRez.UseVisualStyleBackColor = true;
@@ -62,21 +61,22 @@ namespace DataBaseProject
             // BtnStandartRez
             // 
             this.BtnStandartRez.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnStandartRez.Location = new System.Drawing.Point(316, 135);
-            this.BtnStandartRez.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BtnStandartRez.Location = new System.Drawing.Point(421, 166);
+            this.BtnStandartRez.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BtnStandartRez.Name = "BtnStandartRez";
-            this.BtnStandartRez.Size = new System.Drawing.Size(182, 89);
+            this.BtnStandartRez.Size = new System.Drawing.Size(243, 110);
             this.BtnStandartRez.TabIndex = 2;
             this.BtnStandartRez.Text = "Standart Rezervasyon";
             this.BtnStandartRez.UseVisualStyleBackColor = true;
+            this.BtnStandartRez.Click += new System.EventHandler(this.BtnStandartRez_Click);
             // 
             // BtnTesvikRez
             // 
             this.BtnTesvikRez.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnTesvikRez.Location = new System.Drawing.Point(316, 292);
-            this.BtnTesvikRez.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BtnTesvikRez.Location = new System.Drawing.Point(421, 359);
+            this.BtnTesvikRez.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BtnTesvikRez.Name = "BtnTesvikRez";
-            this.BtnTesvikRez.Size = new System.Drawing.Size(182, 89);
+            this.BtnTesvikRez.Size = new System.Drawing.Size(243, 110);
             this.BtnTesvikRez.TabIndex = 3;
             this.BtnTesvikRez.Text = "Teşvik Rezervasyon";
             this.BtnTesvikRez.UseVisualStyleBackColor = true;
@@ -84,10 +84,10 @@ namespace DataBaseProject
             // Btn60GunOnceRez
             // 
             this.Btn60GunOnceRez.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Btn60GunOnceRez.Location = new System.Drawing.Point(74, 292);
-            this.Btn60GunOnceRez.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Btn60GunOnceRez.Location = new System.Drawing.Point(99, 359);
+            this.Btn60GunOnceRez.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Btn60GunOnceRez.Name = "Btn60GunOnceRez";
-            this.Btn60GunOnceRez.Size = new System.Drawing.Size(182, 89);
+            this.Btn60GunOnceRez.Size = new System.Drawing.Size(243, 110);
             this.Btn60GunOnceRez.TabIndex = 4;
             this.Btn60GunOnceRez.Text = "60 Gün Önceden Rezervasyon";
             this.Btn60GunOnceRez.UseVisualStyleBackColor = true;
@@ -95,15 +95,15 @@ namespace DataBaseProject
             // 
             // FrmRezervasyonSecimi
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(820, 472);
+            this.ClientSize = new System.Drawing.Size(1093, 581);
             this.Controls.Add(this.Btn60GunOnceRez);
             this.Controls.Add(this.BtnTesvikRez);
             this.Controls.Add(this.BtnStandartRez);
             this.Controls.Add(this.BtnOnOdemeliRez);
             this.Controls.Add(this.LblBİlgilendirme);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FrmRezervasyonSecimi";
             this.Text = "FrmReservationSelection";
             this.ResumeLayout(false);
