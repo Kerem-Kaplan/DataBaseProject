@@ -55,6 +55,7 @@ namespace DataBaseProject
             this.BtnGeri.TabIndex = 31;
             this.BtnGeri.Text = "Geri";
             this.BtnGeri.UseVisualStyleBackColor = true;
+            this.BtnGeri.Click += new System.EventHandler(this.BtnGeri_Click);
             // 
             // TxtGunSayisi
             // 
@@ -195,8 +196,7 @@ namespace DataBaseProject
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-<<<<<<< HEAD
-            this.ClientSize = new System.Drawing.Size(1156, 714);
+            this.ClientSize = new System.Drawing.Size(1396, 712);
             this.Controls.Add(this.BtnGeri);
             this.Controls.Add(this.TxtGunSayisi);
             this.Controls.Add(this.LblGunSayisi);
@@ -211,9 +211,6 @@ namespace DataBaseProject
             this.Controls.Add(this.TxtİstenenMail);
             this.Controls.Add(this.BtnRezYap);
             this.Controls.Add(this.LblİletisimMail);
-=======
-            this.ClientSize = new System.Drawing.Size(1417, 712);
->>>>>>> eaa6f0aa9e7a65bfc93a96b84e8bad6e478a9aac
             this.Name = "FrmStandartRezervasyon";
             this.Text = "FrmStandartRezervasyon";
             this.ResumeLayout(false);

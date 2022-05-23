@@ -53,11 +53,23 @@
     <Compile Include="Frm60GunOncedenRezervasyon.Designer.cs">
       <DependentUpon>Frm60GunOncedenRezervasyon.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmCalisanGiris.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCalisanGiris.Designer.cs">
+      <DependentUpon>FrmCalisanGiris.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmGirisYap.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmGirisYap.Designer.cs">
       <DependentUpon>FrmGirisYap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmGunlukGelenRapor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmGunlukGelenRapor.Designer.cs">
+      <DependentUpon>FrmGunlukGelenRapor.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmKayitOl.cs">
       <SubType>Form</SubType>
@@ -95,6 +107,12 @@
     <Compile Include="FrmRezervasyonSecimi.Designer.cs">
       <DependentUpon>FrmRezervasyonSecimi.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmRezervasyonİptal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRezervasyonİptal.Designer.cs">
+      <DependentUpon>FrmRezervasyonİptal.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmStandartRezervasyon.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -107,6 +125,12 @@
     <Compile Include="FrmTesvikRezervasyon.Designer.cs">
       <DependentUpon>FrmTesvikRezervasyon.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmCalisanAnasayfa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCalisanAnasayfa.Designer.cs">
+      <DependentUpon>FrmCalisanAnasayfa.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Frm60GunOncedenRezervasyon.resx">
@@ -115,8 +139,14 @@
     <EmbeddedResource Include="FrmBaslangıcSayfa.resx">
       <DependentUpon>FrmBaslangıcSayfa.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmCalisanGiris.resx">
+      <DependentUpon>FrmCalisanGiris.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmGirisYap.resx">
       <DependentUpon>FrmGirisYap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmGunlukGelenRapor.resx">
+      <DependentUpon>FrmGunlukGelenRapor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmKayitOl.resx">
       <DependentUpon>FrmKayitOl.cs</DependentUpon>
@@ -133,11 +163,17 @@
     <EmbeddedResource Include="FrmRezervasyonSecimi.resx">
       <DependentUpon>FrmRezervasyonSecimi.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmRezervasyonİptal.resx">
+      <DependentUpon>FrmRezervasyonİptal.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmStandartRezervasyon.resx">
       <DependentUpon>FrmStandartRezervasyon.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmTesvikRezervasyon.resx">
       <DependentUpon>FrmTesvikRezervasyon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCalisanAnasayfa.resx">
+      <DependentUpon>FrmCalisanAnasayfa.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

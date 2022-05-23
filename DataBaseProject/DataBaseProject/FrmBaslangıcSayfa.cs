@@ -30,5 +30,12 @@ namespace DataBaseProject
             frmKayitOl.Show();
             this.Hide();
         }
+
+        private void BtnCalisanGiris_Click(object sender, EventArgs e)
+        {
+            FrmCalisanGiris frmCalisanGiris = new FrmCalisanGiris();
+            frmCalisanGiris.Show();
+            this.Hide();
+        }
     }
 }

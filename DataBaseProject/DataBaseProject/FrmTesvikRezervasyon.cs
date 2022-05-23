@@ -59,6 +59,8 @@ namespace DataBaseProject
         {
             FrmRezervasyonSecimi frmRezervasyonSecimi = new FrmRezervasyonSecimi();
             frmRezervasyonSecimi.id[0] = this.id[0];
+            frmRezervasyonSecimi.Show();
+            this.Hide();
         }
 
         private void TxtGunSayisi_KeyPress(object sender, KeyPressEventArgs e)
@@ -87,6 +89,11 @@ namespace DataBaseProject
             InsertCustomer.Parameters.AddWithValue("@id", id[0]);
             InsertCustomer.ExecuteNonQuery();
 
+            string insertPrice = "insert into Price(CustomerID,Price) values(@id,@price)";
+            SqlCommand InsertPrice = new SqlCommand(insertPrice, baglanti.DbConnection());
+            InsertPrice.Parameters.AddWithValue("@id", id[0]);
+            InsertPrice.Parameters.AddWithValue("@price", Convert.ToInt32(LblToplamTutar.Text));
+            InsertPrice.ExecuteNonQuery();
 
             baglanti.DbConnection();
             string insertReservation = "insert into Reservation(ReservationType,CustomerID,Price,ReservationDate,ReservationTime,ReservationCreationDate)" +
@@ -100,6 +107,7 @@ namespace DataBaseProject
             InsertReservation.Parameters.AddWithValue("@resCreDate", DateTime.Now);
             InsertReservation.ExecuteNonQuery();
             MessageBox.Show("Rezervasyon alındı");
+
 
         }
     }

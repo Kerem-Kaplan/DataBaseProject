@@ -15,7 +15,7 @@ namespace DataBaseProject
         public int[] id = new int[10];
         public FrmAnasayfa()
         {
-            
+
             InitializeComponent();
         }
 
@@ -39,6 +39,10 @@ namespace DataBaseProject
 
         private void BtnRezervasyonGetir_Click(object sender, EventArgs e)
         {
+            FrmRezervasyonİptal frmRezervasyonİptal = new FrmRezervasyonİptal();
+            frmRezervasyonİptal.id[0] = this.id[0];
+            frmRezervasyonİptal.Show();
+            this.Hide();
 
         }
     }

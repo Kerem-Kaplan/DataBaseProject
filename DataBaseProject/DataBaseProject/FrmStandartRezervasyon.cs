@@ -22,7 +22,7 @@ namespace DataBaseProject
             InitializeComponent();
         }
 
-<<<<<<< HEAD
+
         private void FrmStandartRezervasyon_Load(object sender, EventArgs e)
         {
             DtpTarih.MinDate = DateTime.Now;
@@ -38,7 +38,7 @@ namespace DataBaseProject
             SqlDataReader readerGetPrice = GetPrice.ExecuteReader();
             if (readerGetPrice.Read())
             {
-                LblUcret.Text = (Convert.ToInt32(readerGetPrice["LowestPrice"].ToString())).ToString();
+                LblTutar.Text = (Convert.ToInt32(readerGetPrice["LowestPrice"].ToString())).ToString();
             }
 
             string insertCustomer = "update Customer set CustomerİnformationMail=@cusInfoMail where CustomerID=@id";
@@ -60,19 +60,30 @@ namespace DataBaseProject
                 string insertReservation = "insert into Reservation(ReservationType,CustomerID,Price,ReservationDate,ReservationTime,ReservationCreationDate)" +
                    "values(@resType,@cusID,@price,@resDate,@resTime,@resCreDate)";
                 SqlCommand InsertReservation = new SqlCommand(insertReservation, baglanti.DbConnection());
-                InsertReservation.Parameters.AddWithValue("@resType", 2);
+                InsertReservation.Parameters.AddWithValue("@resType", 3);
                 InsertReservation.Parameters.AddWithValue("@cusID", id[0]);
                 InsertReservation.Parameters.AddWithValue("@price", Convert.ToInt32(LblToplamTutar.Text));
                 InsertReservation.Parameters.AddWithValue("@resDate", DtpTarih.Value);
                 InsertReservation.Parameters.AddWithValue("@resTime", Convert.ToInt32(TxtGunSayisi.Text));
                 InsertReservation.Parameters.AddWithValue("@resCreDate", DateTime.Now);
                 InsertReservation.ExecuteNonQuery();
-                baglanti.DbConnection().Close();
+                
                 MessageBox.Show("Rezervasyon alındı");
             }
+            string insertPrice = "insert into Price(CustomerID,Price) values(@id,@price)";
+            SqlCommand InsertPrice = new SqlCommand(insertPrice, baglanti.DbConnection());
+            InsertPrice.Parameters.AddWithValue("@id", id[0]);
+            InsertPrice.Parameters.AddWithValue("@price", Convert.ToInt32(LblToplamTutar.Text));
+            InsertPrice.ExecuteNonQuery();
+            baglanti.DbConnection().Close();
         }
-=======
-        
->>>>>>> eaa6f0aa9e7a65bfc93a96b84e8bad6e478a9aac
+
+        private void BtnGeri_Click(object sender, EventArgs e)
+        {
+            FrmRezervasyonSecimi frmRezervasyonSecimi = new FrmRezervasyonSecimi();
+            frmRezervasyonSecimi.id[0] = this.id[0];
+            frmRezervasyonSecimi.Show();
+            this.Hide();
+        }
     }
 }

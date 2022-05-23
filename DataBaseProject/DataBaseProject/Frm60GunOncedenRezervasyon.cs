@@ -34,7 +34,7 @@ namespace DataBaseProject
                 LblUcret.Text = (Convert.ToInt32(readerGetPrice["LowestPrice"].ToString()) * (0.85)).ToString();
             }
 
-            string insertCustomer = "update Customer set CustomerİnformationMail=@cusInfoMail and CreditCardNumber=@cardNo where CustomerID=@id";
+            string insertCustomer = "update Customer set CustomerİnformationMail=@cusInfoMail , CreditCardNumber=@cardNo where CustomerID=@id";
 
             if (Convert.ToInt32(TxtGunSayisi.Text) < 1)
             {
@@ -64,6 +64,11 @@ namespace DataBaseProject
                 baglanti.DbConnection().Close();
                 MessageBox.Show("Rezervasyon alındı");
             }
+            string insertPrice = "insert into Price(CustomerID,Price) values(@id,@price)";
+            SqlCommand InsertPrice = new SqlCommand(insertPrice, baglanti.DbConnection());
+            InsertPrice.Parameters.AddWithValue("@id", id[0]);
+            InsertPrice.Parameters.AddWithValue("@price", Convert.ToInt32(LblToplamTutar.Text));
+            InsertPrice.ExecuteNonQuery();
 
         }
 

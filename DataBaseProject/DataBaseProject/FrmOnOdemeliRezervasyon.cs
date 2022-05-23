@@ -86,10 +86,17 @@ namespace DataBaseProject
                     InsertReservation.ExecuteNonQuery();
                     MessageBox.Show("Rezervasyon alındı");
                 }
+                string insertPrice = "insert into Price(CustomerID,Price) values(@id,@price)";
+                SqlCommand InsertPrice = new SqlCommand(insertPrice, baglanti.DbConnection());
+                InsertPrice.Parameters.AddWithValue("@id", id[0]);
+                InsertPrice.Parameters.AddWithValue("@price", Convert.ToInt32(LblToplamTutar.Text));
+                
+                InsertPrice.ExecuteNonQuery();
                 readerGetPrice.Close();
                 GetPrice.Dispose();
                 baglanti.DbConnection().Close();
             }
+
 
             TimeSpan RezarvasyonSuresi()
             {

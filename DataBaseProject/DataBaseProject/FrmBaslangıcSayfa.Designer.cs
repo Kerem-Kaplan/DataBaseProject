@@ -76,6 +76,7 @@ namespace DataBaseProject
             this.BtnCalisanGiris.TabIndex = 3;
             this.BtnCalisanGiris.Text = "Çalışan Giriş";
             this.BtnCalisanGiris.UseVisualStyleBackColor = true;
+            this.BtnCalisanGiris.Click += new System.EventHandler(this.BtnCalisanGiris_Click);
             // 
             // FrmBaslangıcSayfa
             // 
